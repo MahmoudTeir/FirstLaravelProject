@@ -13,27 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'App\Http\Controllers\postcontroller@index');
 
-Route::get('/index.html', function () {
-    return view('index');
-});
+Route::get('/index.html', 'App\Http\Controllers\postcontroller@index');
 
 
-Route::get('/typography.html', function () {
-    return view('typography');
-});
+Route::get('/typography.html', 'App\Http\Controllers\postcontroller@typography');
 
-Route::get('/contacts.html', function () {
-    return view('contacts');
-});
+Route::get('/contacts.html', 'App\Http\Controllers\postcontroller@contacts');
 
-Route::get('/about.html', function () {
-    return view('about');
-});
-
-Route::get('/about-us.html', function () {
-    return view('about-us');
-});
+Route::get('/about-us.html', 'App\Http\Controllers\postcontroller@about_us');
